@@ -1,0 +1,13 @@
+[package]
+name = "poc-masp-sdk"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+namada_sdk = { git = "https://github.com/anoma/namada", tag = "v0.31.4", default-features = false, features = ["tendermint-rpc", "std", "async-client", "async-send", "download-params", "rand"] }
+tendermint-config = "0.34.0"
+tendermint-rpc = { version = "0.34.0", features = ["http-client"]}
+tokio = { version = "1.0", features = ["full"] }
+tracing = "0.1"
